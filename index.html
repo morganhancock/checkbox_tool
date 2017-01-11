@@ -4,13 +4,13 @@
   <meta charset="UTF-8">
   <title>Generate checkbox code with copy to clipboard</title>
   <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
-  
+
   <link rel='stylesheet prefetch' href='https://code.getmdl.io/1.2.1/material.teal-pink.min.css'>
 <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/icon?family=Material+Icons'>
 
       <link rel="stylesheet" href="css/style.css">
 
-  
+
 </head>
 
 <body>
@@ -18,29 +18,29 @@
   <div class="mdl-cell--12 col">
     <h1>Checkbox generator</h1>
   </div></div>
-    
+
 <div class="mdl-grid">
   <div class="mdl-cell--6 col">
     <form action="#">
       <h5>Add folder & file name <i class="material-icons" id="tt1">help</i></h5>
 <div class="mdl-tooltip" data-mdl-for="tt1">Replace any spaces or special characters with underscores and remove the extension. <br> Ex: To add <code>Collecting_content.htm</code> from the the <code>collect folder</code> you'd enter <code>collect_Collecting_content</code>.
-</div>      
+</div>
       <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
         <input class="mdl-textfield__input" type="text" id="checkboxName" data-bind="textInput: checkboxName">
         <label class="mdl-textfield__label" for="checkboxName">File & folder name...</label>
       </div>
             <h5>Add a number <i class="material-icons" id="tt2">help</i></h5>
 <div class="mdl-tooltip" data-mdl-for="tt2">Add a number for this checkbox that no other checkboxes on this page use.
-</div>      
+</div>
       <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
         <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="checkboxNumber" data-bind="textInput: checkboxNumber">
-        <label class="mdl-textfield__label" for="checkboxNumber">Checkbox number...</label>
+        <label class="mdl-textfield__label" for="checkboxNumber">Checkbox ID number...</label>
         <span class="mdl-textfield__error">Input is not a number!</span>
       </div>
-      
+
       <h5>Add checklist item text <i class="material-icons" id="tt3">help</i></h5>
 <div class="mdl-tooltip" data-mdl-for="tt3">This is text visible to users on the html page.
-</div>      
+</div>
       <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
         <input class="mdl-textfield__input" type="text" id="checkboxText" data-bind="textInput: checkboxText">
         <label class="mdl-textfield__label" for="checkboxText">Checkbox item text...</label>
@@ -59,7 +59,7 @@
     <pre id="checkbox_results">
 &lt;p&gt;
   &lt;label for=&quot;<span data-bind="text: checkboxID"></span>&quot; class=&quot;mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect&quot;&gt;
-    &lt;input type=&quot;checkbox&quot; id=&quot;<span data-bind="text: checkboxID"></span>&quot; class=&quot;mdl-checkbox__input&quot; data-store=&quot;<span data-bind="text: checkboxID"></span>&quot;&gt;
+    &lt;input type=&quot;checkbox&quot; id=&quot;<span data-bind="text: checkboxID"></span>&quot; class=&quot;mdl-checkbox__input&quot; data-store=&quot;<span data-bind="text: checkboxID"></span>&quot; /&gt;
     &lt;span class=&quot;mdl-checkbox__label&quot;&gt;<span data-bind="text: checkboxText"></span>&lt;/span&gt;
   &lt;/label&gt;
 &lt;/p&gt;</pre>
