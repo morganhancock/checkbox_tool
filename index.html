@@ -1,97 +1,127 @@
 <!DOCTYPE html>
-<html >
+<html>
+
 <head>
-  <meta charset="UTF-8">
-  <title>Generate checkbox code with copy to clipboard</title>
-  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+    <meta charset="UTF-8">
+    <title>Generate checkbox code with copy to clipboard</title>
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
 
-  <link rel='stylesheet prefetch' href='https://code.getmdl.io/1.2.1/material.teal-pink.min.css'>
-<link rel='stylesheet prefetch' href='https://fonts.googleapis.com/icon?family=Material+Icons'>
+    <link rel='stylesheet prefetch' href='https://code.getmdl.io/1.2.1/material.teal-pink.min.css'>
+    <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/icon?family=Material+Icons'>
 
-      <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css">
 
 
 </head>
 
 <body>
-  <div class="mdl-grid">
-  <div class="mdl-cell--12 col">
-    <h1>Checkbox generator</h1>
-  </div></div>
+    <div class="mdl-grid">
+        <div class="mdl-cell mdl-cell--12-col">
+            <h1>Checkbox generator</h1>
+        </div>
+    </div>
 
-<div class="mdl-grid">
-  <div class="mdl-cell--6 col">
-    <form action="#">
-      <h5>Add project, folder, &amp; file name <i class="material-icons" id="tt1">help</i></h5>
-<div class="mdl-tooltip" data-mdl-for="tt1">Replace any spaces or special characters with underscores and remove the extension. <br> Ex: To add <code>welcome.htm</code> from the the <code>learn</code> folder in Curations, you'd enter <code>CURE_learn_welcome</code>.
-</div>
-      <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-        <input class="mdl-textfield__input" type="text" id="checkboxName" data-bind="textInput: checkboxName">
-        <label class="mdl-textfield__label" for="checkboxName">Project, folder, &amp; file name...</label>
-      </div>
-            <h5>Add a number <i class="material-icons" id="tt2">help</i></h5>
-<div class="mdl-tooltip" data-mdl-for="tt2">Add a number for this checkbox that no other checkboxes on this page use.
-</div>
-      <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-        <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="checkboxNumber" data-bind="textInput: checkboxNumber">
-        <label class="mdl-textfield__label" for="checkboxNumber">Checkbox ID number...</label>
-        <span class="mdl-textfield__error">Input is not a number!</span>
-      </div>
+    <div class="mdl-grid">
+        <div class="mdl-cell mdl-cell--6 col">
 
-      <h5>Add checklist item text <i class="material-icons" id="tt3">help</i></h5>
-<div class="mdl-tooltip" data-mdl-for="tt3">This is text visible to users on the html page.
-</div>
-      <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-        <input class="mdl-textfield__input" type="text" id="checkboxText" data-bind="textInput: checkboxText">
-        <label class="mdl-textfield__label" for="checkboxText">Checkbox item text...</label>
-      </div>
-    </form>
-  </div>
-  <div class="mdl-cell--5 col mdl-cell--1-offset-desktop">
-    <h5>Checkbox preview</h5>
-    <p>
-  <label for="checkboxPreview" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
-    <input type="checkbox" id="checkboxPreview" class="mdl-checkbox__input" data-store="checkboxPreview">
-    <span class="mdl-checkbox__label"><span data-bind="text: checkboxText"></span></span>
-  </label>
-</p>
-    <h5>Checkbox code</h5>
-    <pre id="checkbox_results">
+          <div class="demo-card-wide mdl-card mdl-shadow--2dp">
+            <div class="mdl-card__title">
+              <h2 class="mdl-card__title-text">Checkbox items</h2>
+            </div>
+            <div class="mdl-card__supporting-text">
+              <form action="#">
+                  <h5>Add project, folder, &amp; file name <i class="material-icons" id="tt1">help</i></h5>
+                  <div class="mdl-tooltip" data-mdl-for="tt1">Replace any spaces or special characters with underscores and remove the extension. <br> Ex: To add <code>welcome.htm</code> from the the <code>learn</code> folder in Curations, you'd enter <code>CURE_learn_welcome</code>.
+                  </div>
+                  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                      <input class="mdl-textfield__input" type="text" id="checkboxName" data-bind="textInput: checkboxName">
+                      <label class="mdl-textfield__label" for="checkboxName">Project, folder, &amp; file name...</label>
+                  </div>
+
+                  <h5>Add a number <i class="material-icons" id="tt2">help</i></h5>
+                  <div class="mdl-tooltip" data-mdl-for="tt2">Add a number for this checkbox that no other checkboxes on this page use.
+                  </div>
+                  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                      <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="checkboxNumber" data-bind="textInput: checkboxNumber">
+                      <label class="mdl-textfield__label" for="checkboxNumber">Checkbox ID number...</label>
+                      <span class="mdl-textfield__error">Input is not a number!</span>
+                  </div>
+
+                  <h5>Add checklist item text <i class="material-icons" id="tt3">help</i></h5>
+                  <div class="mdl-tooltip" data-mdl-for="tt3">This is text visible to users on the html page.
+                  </div>
+                  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                      <input class="mdl-textfield__input" type="text" id="checkboxText" data-bind="textInput: checkboxText">
+                      <label class="mdl-textfield__label" for="checkboxText">Checkbox item text...</label>
+                  </div>
+              </form>
+              </div>
+            </div>
+          </div>
+
+        <div class="mdl-cell mdl-cell--6-col">
+          <div class="mdl-card mdl-shadow--2dp">
+            <div class="mdl-card__title">
+              <h2 class="mdl-card__title-text">Checbox preview</h2>
+            </div>
+            <div class="mdl-card__supporting-text">
+              <p>
+                  <label for="checkboxPreview" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
+                    <input type="checkbox" id="checkboxPreview" class="mdl-checkbox__input" data-store="checkboxPreview">
+                    <span class="mdl-checkbox__label"><span data-bind="text: checkboxText"></span></span>
+                  </label>
+              </p>
+            </div>
+            </div>
+            <br>
+            <div class="mdl-card mdl-shadow--2dp">
+              <div class="mdl-card__title">
+                <h2 class="mdl-card__title-text">Checkbox code</h2>
+              </div>
+              <div class="mdl-card__supporting-text">
+                <pre id="checkbox_results">
 &lt;p&gt;
   &lt;label for=&quot;<span data-bind="text: checkboxID"></span>&quot; class=&quot;mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect&quot;&gt;
     &lt;input type=&quot;checkbox&quot; id=&quot;<span data-bind="text: checkboxID"></span>&quot; class=&quot;mdl-checkbox__input&quot; data-store=&quot;<span data-bind="text: checkboxID"></span>&quot; /&gt;
     &lt;span class=&quot;mdl-checkbox__label&quot;&gt;<span data-bind="text: checkboxText"></span>&lt;/span&gt;
   &lt;/label&gt;
 &lt;/p&gt;</pre>
-   <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" data-clipboard-target="#checkbox_results" id="showToast">
-  Copy
-</button>
-    <div id="showToastContent" class="mdl-js-snackbar mdl-snackbar">
-  <div class="mdl-snackbar__text"></div>
-  <button class="mdl-snackbar__action" type="button"></button>
-</div>
-<script>
-(function() {
-  'use strict';
-  window['counter'] = 0;
-  var snackbarContainer = document.querySelector('#showToastContent');
-  var showToastButton = document.querySelector('#showToast');
-  showToastButton.addEventListener('click', function() {
-    'use strict';
-    var data = {message: 'Copied to clipboard! '};
-    snackbarContainer.MaterialSnackbar.showSnackbar(data);
-  });
-}());
-</script>
-  </div>
-</div>
-  <script src='https://code.getmdl.io/1.3.0/material.min.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.1/knockout-min.js'></script>
-<script src='https://cdn.jsdelivr.net/clipboard.js/1.5.16/clipboard.min.js'></script>
+              </div>
+              <div class="mdl-card__actions mdl-card--border">
+                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" data-clipboard-target="#checkbox_results" id="showToast">Copy
+                </button>
+              </div>
+            </div>
+            <div id="showToastContent" class="mdl-js-snackbar mdl-snackbar">
+              <div class="mdl-snackbar__text"></div>
+              <button class="mdl-snackbar__action" type="button"></button>
+            </div>
+            <script>
+                (function() {
+                    'use strict';
+                    window['counter'] = 0;
+                    var snackbarContainer = document.querySelector('#showToastContent');
+                    var showToastButton = document.querySelector('#showToast');
+                    showToastButton.addEventListener('click', function() {
+                        'use strict';
+                        var data = {
+                            message: 'Copied to clipboard! '
+                        };
+                        snackbarContainer.MaterialSnackbar.showSnackbar(data);
+                    });
+                }());
+            </script>
+        </div>
+      </div>
+    </div>
+    <script src='https://code.getmdl.io/1.3.0/material.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.1/knockout-min.js'></script>
+    <script src='https://cdn.jsdelivr.net/clipboard.js/1.5.16/clipboard.min.js'></script>
 
     <script src="js/index.js"></script>
     <script src="js/_checkbox.js"></script>
 
 </body>
+
 </html>

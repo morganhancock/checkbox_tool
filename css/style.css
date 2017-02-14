@@ -6,6 +6,7 @@ pre {
 }
 body {
   margin-left: 5em;
+  background-color: #fbfbfb;
 }
 
 code {
@@ -17,4 +18,9 @@ code {
 
 h5 .material-icons {
   font-size: 18px
+}
+
+.mdl-card {
+  width: 100%;
+  min-height: 150px;
 }
